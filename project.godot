@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Control",
+"class": "InventoryManager",
+"language": "GDScript",
+"path": "res://Scripts/InventoryManager.gd"
+}, {
+"base": "Control",
+"class": "InventorySlot",
+"language": "GDScript",
+"path": "res://Scripts/InventorySlot.gd"
+}, {
+"base": "Resource",
+"class": "ItemData",
+"language": "GDScript",
+"path": "res://Scripts/ItemData.gd"
+} ]
+_global_script_class_icons={
+"InventoryManager": "",
+"InventorySlot": "",
+"ItemData": ""
+}
+
+[application]
+
+config/name="GridInventory"
+run/main_scene="res://Scenes/Main.tscn"
+config/icon="res://icon.png"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
